@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+.calculator {
+  font-family: $font;
+  color: $white;
+}
+
+.board {
+  border: 1px solid $main;
+  display: inline-block;
+  width: auto;
+  flex-wrap: wrap;
+}
+
+button {
+  border: $border;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}

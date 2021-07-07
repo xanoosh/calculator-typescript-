@@ -1,7 +1,7 @@
 import Button from './Button';
 
 interface Props {
-  btnList: Array<object>;
+  btnList: Array<any>;
   calculationEvent: any;
   resultEvent: any;
 }
@@ -14,7 +14,7 @@ const CalculatorButtons: React.FC<Props> = ({
   const buttons = btnList.map((btn) => (
     <Button
       val={btn.val}
-      click={typeof btn.val === 'number' ? calculationEvent : resultEvent}
+      click={btn.val === '=' ? resultEvent : calculationEvent}
     />
   ));
   return <div className="board">{buttons}</div>;

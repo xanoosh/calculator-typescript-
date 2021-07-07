@@ -1,4 +1,4 @@
-import './App.css';
+import '../styles/index.scss';
 import CalculatorButtons from './CalculatorButtons';
 import { useState } from 'react';
 
@@ -27,19 +27,13 @@ function App() {
     setCalculation((prev) => eval(prev));
   };
   return (
-    <div className="App">
-      <h2>Current state: {calculation}</h2>
+    <div className="calculator">
       <CalculatorButtons
         btnList={calculatorBtnList}
         calculationEvent={handleCalculation}
         resultEvent={handleResult}
       />
-
-      <Button val="2" click={handleCalculation} />
-      <Button val="3" click={handleCalculation} />
-      <Button val="+" isNotNumber={true} click={handleCalculation} />
-      <Button val="-" isNotNumber={true} click={handleCalculation} />
-      <Button val="=" isNotNumber={true} click={handleResult} />
+      <h2>Result: {calculation}</h2>
     </div>
   );
 }
