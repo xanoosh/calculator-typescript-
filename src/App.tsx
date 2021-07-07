@@ -1,12 +1,11 @@
-import React from 'react';
 import './App.css';
-import TextField from './TextField';
+import Button from './Button';
 
 function App() {
   return (
     <div className="App">
       <h2>my calculator app</h2>
-      <TextField text="text" />
+      <Button val="1" />
     </div>
   );
 }
