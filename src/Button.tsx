@@ -1,20 +1,21 @@
-import React from 'react';
-
 interface Props {
   val: string;
   click: any;
-  isNumber?: boolean;
+  isNotNumber?: boolean;
   isClicked?: boolean;
 }
 
 const Button: React.FC<Props> = ({
   val,
   click,
-  isNumber = false,
+  isNotNumber = false,
   isClicked = false,
 }) => {
   return (
-    <button onClick={click} className={isNumber && isClicked ? 'inactive' : ''}>
+    <button
+      onClick={click}
+      className={isNotNumber && isClicked ? 'inactive' : ''}
+    >
       {val}
     </button>
   );
