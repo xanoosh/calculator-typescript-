@@ -1,5 +1,18 @@
+@import './reset.scss';
 @import './variables.scss';
 
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  @extend %flex-center;
+  height: 100vh;
+  background: $main-bg;
+  text-align: center;
+}
 .calculator {
   font-family: $font;
   color: $white;
@@ -10,11 +23,20 @@
   display: inline-block;
   width: auto;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 button {
   border: $border;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
+  color: $white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h2 {
+  color: $main;
 }
