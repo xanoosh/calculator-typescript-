@@ -6,13 +6,15 @@ import { useState } from 'react';
 
 function App() {
   const [calculation, setCalculation] = useState<string>('');
+  //validate typed values (first num than symbol etc.)
+  const [typeNumber, setTypeNumber] = useState<boolean>(true);
   const [calculatorBtnList, setCalculatorBtnList] = useState([
     { val: 1 },
     { val: 2 },
     { val: 3 },
-    { val: '+', useOnce: true },
-    { val: '-', useOnce: true },
-    { val: '*', useOnce: true },
+    { val: '+' },
+    { val: '-' },
+    { val: '*' },
     { val: '/', useOnce: true },
     { val: '=' },
   ]);
