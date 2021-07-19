@@ -23,6 +23,10 @@ function App() {
     const val = e.currentTarget as HTMLButtonElement;
 
     setCalculation((prev) => prev + val.textContent);
+    const isNumber = isNaN(Number(val.textContent))
+      ? 'Typed Symbol'
+      : 'Typed Number';
+    console.log(isNumber);
     // setCalculation((prev) => {
     //   if (prev.length) return prev + val.textContent;
     //   if (!prev.length) return '0' + val.textContent;
