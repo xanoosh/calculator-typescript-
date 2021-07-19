@@ -19,6 +19,7 @@ function App() {
 
   const handleCalculation = (e: MouseEvent) => {
     const val = e.currentTarget as HTMLButtonElement;
+
     setCalculation((prev) => prev + val.textContent);
     // setCalculation((prev) => {
     //   if (prev.length) return prev + val.textContent;
