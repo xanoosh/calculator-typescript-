@@ -27,6 +27,8 @@ function App() {
       ? 'Typed Symbol'
       : 'Typed Number';
     console.log(isNumber);
+    // if(isNaN(Number(val.textContent))) setTypeNumber(true);
+
     // setCalculation((prev) => {
     //   if (prev.length) return prev + val.textContent;
     //   if (!prev.length) return '0' + val.textContent;

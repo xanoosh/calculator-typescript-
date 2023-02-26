@@ -11,8 +11,9 @@ const CalculatorButtons: React.FC<Props> = ({
   calculationEvent,
   resultEvent,
 }) => {
-  const buttons = btnList.map((btn) => (
+  const buttons = btnList.map((btn, i) => (
     <Button
+      key={i}
       val={btn.val}
       click={btn.val === '=' ? resultEvent : calculationEvent}
     />
